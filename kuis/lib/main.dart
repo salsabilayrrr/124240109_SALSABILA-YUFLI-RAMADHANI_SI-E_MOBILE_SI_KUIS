@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'root.dart';
 
 void main() {
   runApp(const MainApp());
@@ -9,8 +10,18 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(body: Center(child: Text('Hello World!'))),
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Alat Tulis App',
+      theme: ThemeData(
+        primarySwatch: Colors.orange,
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.orange,
+          foregroundColor: Colors.white,
+        ),
+      ),
+
+      home: const Root(),
     );
   }
 }
