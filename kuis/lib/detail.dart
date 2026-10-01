@@ -11,13 +11,17 @@ class DetailPage extends StatefulWidget {
 }
 
 class _DetailPageState extends State<DetailPage> {
-  late TextEditingController _controller;
+  late TextEditingController _controller, _controller2;
 
   @override
   void initState() {
     super.initState();
-    _controller = TextEditingController(text: widget.foodItem.stock.toString());
+    _controller = TextEditingController(
+      text: widget.foodItem.stock.toString());
+      _controller2 = TextEditingController(
+      text: widget.foodItem.price.toString());
   }
+  
 
   @override
   void dispose() {
@@ -71,7 +75,7 @@ class _DetailPageState extends State<DetailPage> {
             const Divider(height: 32),
 
 
-//deskipsi
+          //deskipsi
             const Text(
               'Deskripsi: ',
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 14),
@@ -90,7 +94,6 @@ class _DetailPageState extends State<DetailPage> {
                 });
               },
             ),    
-
 
 
             const SizedBox(height: 10),
@@ -127,7 +130,7 @@ class _DetailPageState extends State<DetailPage> {
           
             const SizedBox(height: 8),
             TextField(
-              controller: _controller,
+              controller: _controller2,
               keyboardType:
                   TextInputType.number, // Memunculkan keyboard angka di HP
               decoration: InputDecoration(
@@ -144,9 +147,6 @@ class _DetailPageState extends State<DetailPage> {
               },
 
             ),
-
-
-            
 
             const SizedBox(height: 30),
             // Tombol Selesai

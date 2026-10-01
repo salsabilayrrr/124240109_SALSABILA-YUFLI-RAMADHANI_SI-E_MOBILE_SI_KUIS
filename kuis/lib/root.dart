@@ -40,7 +40,7 @@ class _RootState extends State<Root> {
       bottomNavigationBar: BottomNavigationBar(
         backgroundColor: Colors.white,
         type: BottomNavigationBarType.fixed,
-        selectedItemColor: Colors.orange,
+        selectedItemColor: Colors.blue,
         unselectedItemColor: Colors.grey,
 
         selectedLabelStyle: TextStyle(
@@ -59,7 +59,7 @@ class _RootState extends State<Root> {
         },
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.restaurant_menu),
+            icon: Icon(Icons.store),
             label: 'Menu',
           ),
           BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Profil'),
